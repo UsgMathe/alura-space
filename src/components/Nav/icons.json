@@ -1,0 +1,32 @@
+[
+  {
+    "link": "início",
+    "alt": "Ícone de uma casa",
+    "path": "/assets/icons/home-ativo.png",
+    "id": "1"
+  },
+  {
+    "link": "Mais curtidas",
+    "alt": "Ícone de uma mão com o polegar opositor levantado",
+    "path": "/assets/icons/mais-curtidas-inativo.png",
+    "id": "2"
+  },
+  {
+    "link": "Mais vistas",
+    "alt": "Ícone de um olho",
+    "path": "/assets/icons/mais-vistas-inativo.png",
+    "id": "3"
+  },
+  {
+    "link": "Novas",
+    "alt": "Ícone de uma estrelinha brilhando",
+    "path": "/assets/icons/novas-inativo.png",
+    "id": "4"
+  },
+  {
+    "link": "Surpreenda-me",
+    "alt": "Ícone de uma lâmpada",
+    "path": "/assets/icons/surpreenda-me-inativo.png",
+    "id": "5"
+  }
+]
