@@ -1,72 +1,93 @@
 [
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Via Láctea",
+    "creditos": "Andy Holmes",
     "imagem": "/assets/images/gallery/foto-1.png",
     "id": "1",
     "tag": "Galáxias"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Estrelas",
+    "creditos": "Billy Huynh",
     "imagem": "/assets/images/gallery/foto-2.png",
     "id": "2",
     "tag": "Estrelas"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Lua da Terra",
+    "creditos": "Michael",
     "imagem": "/assets/images/gallery/foto-3.png",
     "id": "3",
-    "tag": "Lua"
+    "tag": "Luas"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Galáxia andromeda",
+    "creditos": "Guillermo Ferla",
     "imagem": "/assets/images/gallery/foto-4.png",
     "id": "4",
     "tag": "Galáxias"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Nebulosa Laguna",
+    "creditos": "Alexander Andrews",
     "imagem": "/assets/images/gallery/foto-5.png",
     "id": "5",
-    "tag": "Estrelas"
+    "tag": "Nebulosas"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Nebulosa Via Láctea",
+    "creditos": "Graham Holtshausen",
     "imagem": "/assets/images/gallery/foto-6.png",
     "id": "6",
     "tag": "Nebulosas"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Via Láctea",
+    "creditos": "Bryan Goff",
     "imagem": "/assets/images/gallery/foto-7.png",
     "id": "7",
     "tag": "Galáxias"
   },
   {
-    "titulo": "Nome da Foto",
+    "titulo": "Céu estrelado colorido",
     "creditos": "Alura Space",
     "imagem": "/assets/images/gallery/foto-8.png",
     "id": "8",
-    "tag": "Nebulosas"
+    "tag": "Estrelas"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Céu noturno estrelado",
+    "creditos": "Kyle Gregory Devaras",
     "imagem": "/assets/images/gallery/foto-9.png",
     "id": "9",
     "tag": "Estrelas"
   },
   {
-    "titulo": "Nome da Foto",
-    "creditos": "Alura Space",
+    "titulo": "Estrelas com exposição prolongada",
+    "creditos": "Rodion Kutsaiev",
     "imagem": "/assets/images/gallery/foto-10.png",
     "id": "10",
     "tag": "Estrelas"
+  },
+  {
+    "titulo": "Planeta Marte",
+    "creditos": "Planet Volumes",
+    "imagem": "/assets/images/gallery/foto-11.png",
+    "id": "11",
+    "tag": "Planetas"
+  },
+  {
+    "titulo": "Planeta Vermelho",
+    "creditos": "Planet Volumes",
+    "imagem": "/assets/images/gallery/foto-12.png",
+    "id": "12",
+    "tag": "Planetas"
+  },
+  {
+    "titulo": "Planeta Terra",
+    "creditos": "Javier Miranda",
+    "imagem": "/assets/images/gallery/foto-13.png",
+    "id": "13",
+    "tag": "Planetas"
   }
 ]

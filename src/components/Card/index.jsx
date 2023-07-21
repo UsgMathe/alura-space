@@ -4,24 +4,57 @@ import {
   AiOutlineHeart as FavoriteOff,
   AiFillHeart as FavoriteOn,
 } from 'react-icons/ai';
+import { useState } from 'react';
+export default function Card({
+  item,
+  isFavorite,
+  addFavorite,
+  removeFavorite,
+}) {
+  const [favorite, setFavorite] = useState(isFavorite);
 
-export default function Card({ item }) {
+  const handleChangeFavorite = () => {
+    setFavorite(!favorite);
+    addFavorite(item);
+  };
+
   return (
     <li
       key={item.id}
-      className="shadow-2xl rounded-[20px] m-2 text-[#fff] scale-100 hover:scale-[102%] transition-all duration-200 cursor-pointer"
+      className="w-[285px] h-[280px] shadow-2xl rounded-[20px] m-2 text-[#fff] scale-100 transition-all duration-200 cursor-pointer hover:scale-[102%] hover:shadow-darkBlue"
     >
-      <img className="w-full" src={item.imagem} alt={item.titulo} />
+      <img
+        className="w-full h-2/4 object-cover rounded-t-[20px]"
+        src={item.imagem}
+        alt={item.titulo}
+      />
       <div className="py-2  w-full">
         <p className="px-4 text-xl font-semibold ">{item.titulo}</p>
         <div className="px-4 pb-2 text-lg font-normal ">
-          <p>Fonte/fotógrafo/satélite</p>
+          <p>{item.creditos}</p>
           <span className="absolute right-2 bottom-3 flex items-center gap-1">
-            <FavoriteOff
-              size={28}
-              className="hover:text-purple transition-all"
-            />
-            <Expand size={33} className="hover:text-purple transition-all" />
+            {favorite ? (
+              <>
+                <FavoriteOff
+                  size={28}
+                  className="absolute"
+                  onClick={handleChangeFavorite}
+                />
+                <FavoriteOn
+                  size={28}
+                  className="text-pink transition-all"
+                  onClick={handleChangeFavorite}
+                />
+              </>
+            ) : (
+              <FavoriteOff
+                size={28}
+                className="hover:text-pink transition-all"
+                onClick={handleChangeFavorite}
+              />
+            )}
+
+            <Expand size={33} className="hover:text-pink transition-all" />
           </span>
         </div>
       </div>
