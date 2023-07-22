@@ -15,7 +15,12 @@ export default function Card({
 
   const handleChangeFavorite = () => {
     setFavorite(!favorite);
-    addFavorite(item);
+
+    if (isFavorite) {
+      removeFavorite(item);
+    } else {
+      addFavorite(item);
+    }
   };
 
   return (
@@ -35,11 +40,6 @@ export default function Card({
           <span className="absolute right-2 bottom-3 flex items-center gap-1">
             {favorite ? (
               <>
-                <FavoriteOff
-                  size={28}
-                  className="absolute"
-                  onClick={handleChangeFavorite}
-                />
                 <FavoriteOn
                   size={28}
                   className="text-pink transition-all"

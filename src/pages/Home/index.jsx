@@ -4,7 +4,8 @@ import Gallery from '@/components/Gallery';
 import Header from '@/components/Header';
 import Nav from '@/components/Nav';
 import Popular from '@/components/Populares';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { setLocalStorage, getLocalStorage } from '@/services/localStorage';
 
 export default function Home() {
   const [tag, setTag] = useState();
@@ -16,6 +17,26 @@ export default function Home() {
       behavior: 'smooth',
     });
   };
+
+  const [favorites, setFavorites] = useState(
+    getLocalStorage('favorites') ? JSON.parse(getLocalStorage('favorites')) : []
+  );
+
+  const addFavorite = item => {
+    setFavorites([...favorites, item]);
+  };
+
+  const removeFavorite = item => {
+    setFavorites(favorites.filter(local => local.id !== item.id));
+  };
+
+  const checkFavorite = item => {
+    return favorites.find(fav => fav.id == item.id);
+  };
+
+  useEffect(() => {
+    setLocalStorage('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   return (
     <>
@@ -31,6 +52,9 @@ export default function Home() {
                 search={search}
                 selectedTag={tag}
                 filterPhotos={value => setTag(value)}
+                addFavorite={item => addFavorite(item)}
+                removeFavorite={item => removeFavorite(item)}
+                checkFavorite={item => checkFavorite(item)}
               />
               <Popular />
             </div>

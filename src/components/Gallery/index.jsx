@@ -7,6 +7,9 @@ export default function Gallery({
   filterPhotos,
   search,
   galleryRef,
+  addFavorite,
+  removeFavorite,
+  checkFavorite,
 }) {
   const tags = [...new Set(photos.map(value => value.tag))];
 
@@ -18,7 +21,14 @@ export default function Gallery({
         selectedTag={selectedTag}
         filterPhotos={tag => filterPhotos(tag)}
       />
-      <Cards search={search} selectedTag={selectedTag} itens={photos} />
+      <Cards
+        search={search}
+        selectedTag={selectedTag}
+        itens={photos}
+        addFavorite={addFavorite}
+        removeFavorite={removeFavorite}
+        checkFavorite={checkFavorite}
+      />
     </div>
   );
 }

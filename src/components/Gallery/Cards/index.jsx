@@ -1,37 +1,13 @@
-import Card from '../../Card';
-import {
-  setLocalStorage,
-  getLocalStorage,
-} from '../../../services/localStorage';
-import { useEffect, useState } from 'react';
+import Card from '@/components/Card';
 
-export default function Cards({ itens, selectedTag, search }) {
-  const [favorites, setFavorites] = useState(
-    getLocalStorage('favorites') ? JSON.parse(getLocalStorage('favorites')) : []
-  );
-
-  const addFavorite = item => {
-    setFavorites([...favorites, item]);
-
-    // let localFavorites = getLocalStorage('favorites');
-    // if (localFavorites) {
-    //   console.log(localFavorites);
-    //   setLocalStorage('favorites', [[JSON.stringify(item)]]);
-    // } else {
-    //   setLocalStorage('favorites', [[JSON.stringify(item)]]);
-    // }
-  };
-
-  useEffect(() => {
-    setLocalStorage('favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
-  const removeFavorite = item => {
-    let localFavorites = getLocalStorage('favorites');
-
-    setLocalStorage('favorites', [...localFavorites, item]);
-  };
-
+export default function Cards({
+  itens,
+  selectedTag,
+  search,
+  addFavorite,
+  removeFavorite,
+  checkFavorite,
+}) {
   return (
     <ul className="flex justify-center items-start flex-wrap">
       {search.length <= 0
@@ -47,7 +23,7 @@ export default function Cards({ itens, selectedTag, search }) {
                     item={filterItem}
                     addFavorite={item => addFavorite(item)}
                     removeFavorite={item => removeFavorite(item)}
-                    isFavorite={favorites.includes(filterItem)}
+                    isFavorite={checkFavorite(filterItem)}
                   />
                 );
               })
@@ -58,7 +34,7 @@ export default function Cards({ itens, selectedTag, search }) {
                   item={filterItem}
                   addFavorite={item => addFavorite(item)}
                   removeFavorite={item => removeFavorite(item)}
-                  isFavorite={favorites.includes(itens)}
+                  isFavorite={checkFavorite(filterItem)}
                 />
               );
             })
@@ -76,7 +52,7 @@ export default function Cards({ itens, selectedTag, search }) {
                   item={filterItem}
                   addFavorite={item => addFavorite(item)}
                   removeFavorite={item => removeFavorite(item)}
-                  isFavorite={favorites.includes(filterItem)}
+                  isFavorite={checkFavorite(filterItem)}
                 />
               );
             })}
