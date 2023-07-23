@@ -1,12 +1,13 @@
-import { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 
 export default function ModalImage({ item, isOpen, closeModal }) {
   return (
     <div
       className={`${
-        !isOpen && 'hidden'
-      } fixed flex center-center inset-0 w-screen h-screen p-16 backdrop-blur-md bg-[#000]/40 z-50 transition-all `}
+        !isOpen
+          ? 'fixed opacity-0 -z-50'
+          : 'fixed flex center-center inset-0 w-screen h-screen p-16 backdrop-blur-md bg-black/40 z-50 transition-all'
+      } `}
     >
       <div
         className={`${
