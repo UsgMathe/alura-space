@@ -7,6 +7,7 @@ export default function Cards({
   addFavorite,
   removeFavorite,
   checkFavorite,
+  openModal,
 }) {
   return (
     <ul className="flex justify-center items-start flex-wrap">
@@ -24,6 +25,7 @@ export default function Cards({
                     addFavorite={item => addFavorite(item)}
                     removeFavorite={item => removeFavorite(item)}
                     isFavorite={checkFavorite(filterItem)}
+                    openModal={openModal}
                   />
                 );
               })
@@ -35,6 +37,7 @@ export default function Cards({
                   addFavorite={item => addFavorite(item)}
                   removeFavorite={item => removeFavorite(item)}
                   isFavorite={checkFavorite(filterItem)}
+                  openModal={openModal}
                 />
               );
             })
@@ -53,6 +56,7 @@ export default function Cards({
                   addFavorite={item => addFavorite(item)}
                   removeFavorite={item => removeFavorite(item)}
                   isFavorite={checkFavorite(filterItem)}
+                  openModal={openModal}
                 />
               );
             })}

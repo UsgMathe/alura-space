@@ -9,7 +9,9 @@ export default function Header({ onChange, scrollTo }) {
   };
 
   return (
-    <header className={`flex justify-between items-center m-6`}>
+    <header
+      className={`fixed sm:relative top-0 left-0  backdrop-blur-sm bg-footerBlue w-full flex justify-between items-center p-4 z-50`}
+    >
       <a href="/">
         <img src={logo} alt="Logo do Alura Space" />
       </a>

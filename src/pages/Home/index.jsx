@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from 'react';
 import { setLocalStorage, getLocalStorage } from '@/services/localStorage';
 
 export default function Home() {
-  const [tag, setTag] = useState();
+  const [tag, setTag] = useState('');
   const [search, setSearch] = useState('');
   const galleryRef = useRef();
 
@@ -44,9 +44,9 @@ export default function Home() {
       <main className="my-0 mx-6">
         <section className="flex items-center mt-8">
           <Nav />
-          <div className="w-full ">
-            <Banner />
-            <div className="w-full flex mt-20 ">
+          <div className="w-full mt-32 sm:mt-2 sm:w-[80%] ">
+            <Banner isOpen={search.length <= 0} />
+            <div className="w-full flex flex-col sm:flex-row mt-20 ">
               <Gallery
                 galleryRef={galleryRef}
                 search={search}

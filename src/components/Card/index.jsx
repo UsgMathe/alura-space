@@ -10,6 +10,7 @@ export default function Card({
   isFavorite,
   addFavorite,
   removeFavorite,
+  openModal,
 }) {
   const [favorite, setFavorite] = useState(isFavorite);
 
@@ -41,7 +42,7 @@ export default function Card({
             {favorite ? (
               <>
                 <FavoriteOn
-                  size={28}
+                  size={30}
                   className="text-pink transition-all"
                   onClick={handleChangeFavorite}
                 />
@@ -54,7 +55,11 @@ export default function Card({
               />
             )}
 
-            <Expand size={33} className="hover:text-pink transition-all" />
+            <Expand
+              size={33}
+              className="hover:text-pink transition-all"
+              onClick={() => openModal(item)}
+            />
           </span>
         </div>
       </div>

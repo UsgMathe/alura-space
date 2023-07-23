@@ -49,45 +49,38 @@
     "tag": "Galáxias"
   },
   {
-    "titulo": "Céu estrelado colorido",
-    "creditos": "Alura Space",
+    "titulo": "Céu noturno estrelado",
+    "creditos": "Kyle Gregory Devaras",
     "imagem": "/assets/images/gallery/foto-8.png",
     "id": "8",
     "tag": "Estrelas"
   },
   {
-    "titulo": "Céu noturno estrelado",
-    "creditos": "Kyle Gregory Devaras",
+    "titulo": "Estrelas com exposição prolongada",
+    "creditos": "Rodion Kutsaiev",
     "imagem": "/assets/images/gallery/foto-9.png",
     "id": "9",
     "tag": "Estrelas"
   },
   {
-    "titulo": "Estrelas com exposição prolongada",
-    "creditos": "Rodion Kutsaiev",
+    "titulo": "Planeta Marte",
+    "creditos": "Planet Volumes",
     "imagem": "/assets/images/gallery/foto-10.png",
     "id": "10",
-    "tag": "Estrelas"
+    "tag": "Planetas"
   },
   {
-    "titulo": "Planeta Marte",
+    "titulo": "Planeta Vermelho",
     "creditos": "Planet Volumes",
     "imagem": "/assets/images/gallery/foto-11.png",
     "id": "11",
     "tag": "Planetas"
   },
   {
-    "titulo": "Planeta Vermelho",
-    "creditos": "Planet Volumes",
-    "imagem": "/assets/images/gallery/foto-12.png",
-    "id": "12",
-    "tag": "Planetas"
-  },
-  {
     "titulo": "Planeta Terra",
     "creditos": "Javier Miranda",
-    "imagem": "/assets/images/gallery/foto-13.png",
-    "id": "13",
+    "imagem": "/assets/images/gallery/foto-12.png",
+    "id": "12",
     "tag": "Planetas"
   }
 ]

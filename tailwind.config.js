@@ -15,6 +15,8 @@ export default {
       transparent: 'transparent',
       current: 'currentColor',
       'text': '#d9d9d9',
+      'white': '#fff',
+      'black': '#000',
       'darkBlue': '#041833',
       'lightBlue': '#154580',
       'footerBlue': '#04244f',
