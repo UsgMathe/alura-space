@@ -5,7 +5,7 @@ export default function ModalImage({ item, isOpen, closeModal }) {
   return (
     <div
       className={`${
-        !isOpen && 'opacity-0 -z-50'
+        !isOpen && 'hidden'
       } fixed flex center-center inset-0 w-screen h-screen p-16 backdrop-blur-md bg-[#000]/40 z-50 transition-all `}
     >
       <div
